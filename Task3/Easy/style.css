@@ -1,170 +1,123 @@
-@font-face {
-    font-family: arimo;
-    src: url(./fonts/Arimo-Regular.ttf);
-}
-
-@font-face {
-    font-family: figtree;
-    src: url(./fonts/Figtree-Regular.ttf);
-}
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html,
 body {
-    height: 100%;
-    width: 100%;
-    font-family: figtree;
-    background-color: black;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(180, 0, 255, 0.45),
+            transparent 35%),
+
+        radial-gradient(circle at center,
+            rgba(0, 60, 255, 0.729),
+            transparent 40%),
+
+        radial-gradient(circle at bottom right,
+            rgba(140, 0, 255, 0.50),
+            transparent 35%),
+
+        radial-gradient(circle at bottom left,
+            rgba(58, 4, 81, 0.659),
+            transparent 45%),
+
+        #181d38;
+
+    color: white;
 }
 
-.header {
+.art-section {
+    width: 100%;
+}
+
+.top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    margin: 5vh;
+
 }
 
-.brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5vw;
-    text-decoration: none;
+.top-bar h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: -5vh;
 }
 
-.brand img {
-    width: 40px;
-    height: 40px;
-}
-
-.brand span {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-.main-nav {
-    display: flex;
-    gap: 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.main-nav a {
+.top-bar a {
     color: white;
     text-decoration: none;
+    font-size: 14px;
+    margin-top: -1vh;
 }
 
-.main-nav a:hover {
-    color: #ff6347;
-}
-
-.cta {
-    padding: 10px 20px;
-    background-color: gray;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.hero {
+.card-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 0 5vh;
 }
 
-.hero-title {
-    font-family: arimo;
-    font-size: 8rem;
-    font-weight: 900;
-    color: white;
-    margin: 2vh;
-    word-spacing: 0.6rem;
+.card {
+    width: calc(25% - 27px);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-6px);
 }
 
-.filters {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
-    color: white;
-}
-
-.filter {
-    padding: 10px 20px;
-    background-color: rgb(28, 27, 27);
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-
-.active {
-    background-color: #ff6347;
-}
-
-
-.blog-grid {
-    min-height: 60vh;
-    width: 95vw;
-    margin: 0 2.5vw;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    overflow: hidden;
-    justify-content: center;}
-
-.card-content {
-    min-height: 60vh;
-    width: 30vw;
-    background-color: rgb(28, 27, 27);
-    color: white;
-    border-radius: 20px;
-    gap: 1vh;
-    padding-bottom: 2vh;
-}
-
-.card-content img {
+.card img {
     width: 100%;
-    height: 40vh;
-    object-fit:cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-position:center;
-    border-radius: 25px;
-
+    height: 220px;
+    object-fit: fill;
+    border-radius: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-.card-content:nth-child(2) img{
-    object-position: 0% 30%;
+.card-info {
+    margin-top: 18px;
 }
 
-.tag {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #ff6347;
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.text h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text span {
+    font-size: 13px;
+    color: #ddd;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    border: 2px solid #c46dff;
+    background: transparent;
     color: white;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.card-content h2 {
-    font-size: 1.6rem;
-    margin: 10px;
-    letter-spacing: 0.1.5rem;
+button:hover {
+    background: #b44cff;
 }
 
-.card-content time {
-    font-size: 0.8rem;
-    color: gray;
-    margin: 0 10px;
-}

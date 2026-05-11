@@ -1,110 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shinsei Village</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScaleX Insights & Blogs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="header">
+        <a class="brand" href="#">
+            <img src="logo.png" alt="site-logo">
+            <span>ScaleX</span>
+        </a>
 
-  <!-- ================= NAVBAR ================= -->
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Blogs</a>
+            <a href="#">Contact Us</a>
+        </nav>
 
-  <nav class="navbar">
+        <a class="cta" href="#">Get Started</a>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="hero-title">Insights & Blogs</h1>
+            <div class="filters">
+                <a class="filter active">All</a>
+                <a class="filter">Tech</a>
+                <a class="filter">SaaS</a>
+                <a class="filter">Marketing</a>
+            </div>
+        </section>
+        <section class="blog-grid">
+            <div class="card-content">
 
-    <div class="logo">
-      SHINSEI VILLAGE
-    </div>
+                <img src="./images/tech.jpg" alt="Tech Image">
+                <span class="tag">Tech</span>
+                <h2>The Ultimate Guide To SaaS Marketing</h2>
+                <time datetime="2025-05-23">May 23, 2025</time>
+            </div>
+            <div class="card-content">
 
-    <div class="nav-links">
-      <a href="#">Vision</a>
-      <a href="#">Collection</a>
-      <a href="#">Roadmap</a>
-      <a href="#">Team</a>
-      <a href="#">Mint</a>
-      <a href="#">Wallet Checker</a>
-    </div>
+                <img src="./images/saas.jpg" alt="SaaS Image">
+                <span class="tag">SaaS</span>
+                <h2>5 Key Trends In SaaS Growth For 2025</h2>
+                <time datetime="2025-05-23">May 23, 2025</time>
+            </div>
+            <div class="card-content">
 
-    <div class="socials">
-      <div>IG</div>
-      <div>TW</div>
-      <div>DC</div>
-    </div>
+                <img src="./images/marketing.jpg" alt="Marketing Image">
+                <span class="tag">Marketing</span>
+                <h2>How Data-Driven Strategies Are Important</h2>
+                <time datetime="2025-05-23">May 23, 2025</time>
+            </div>
+        </section>
 
-  </nav>
-
-  <!-- ================= HERO ================= -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-subtitle">
-        Join the Mystic Adventure
-      </div>
-
-      <h1 class="hero-title">
-        SHINSEI VILLAGE
-      </h1>
-
-      <div class="hero-text">
-        Genuine Storytelling Project
-      </div>
-
-      <a href="#" class="mint-btn">
-        MINT NOW
-      </a>
-
-    </div>
-
-    <!-- Character Image -->
-    <div class="character">
-      <img src="https://pngimg.com/d/samurai_PNG27.png" alt="">
-    </div>
-
-    <!-- Bottom Curve -->
-    <div class="curve"></div>
-
-  </section>
-
-  <!-- ================= VISION SECTION ================= -->
-
-  <section class="vision">
-
-    <h2 class="vision-title">
-      VISION
-    </h2>
-
-    <div class="line">
-      <div class="diamond"></div>
-    </div>
-
-    <div class="vision-content">
-
-      <p>
-        Shinsei Village is a collection featuring 1,200 demigod monkeys,
-        unraveling a mysterious case to save their village. The project
-        is not just a PFP collection, but a fascinating on-chain storyline.
-        Through a focus on community engagement, the project seeks to build
-        the new era of Web3 entertainment.
-      </p>
-
-      <p>
-        Each stage of development is aimed to deliver the adventure
-        experience to the community, as well as provides rewards and
-        benefits for all holders. Solve weekly puzzles to open mystic
-        boxes and collect SCLUE! Uncovering the plot is entirely up to
-        the vote and decisions of the community.
-      </p>
-
-    </div>
-
-  </section>
-
+    </main>
 </body>
+
 </html>
