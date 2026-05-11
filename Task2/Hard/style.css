@@ -1,0 +1,275 @@
+@font-face {
+    font-family: mono;
+    src: url(./fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: merri;
+    src: url(./fonts/Merriweather_120pt-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: mono;
+    overflow: hidden;
+}
+
+.insimg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.left-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: #fefefe;
+    z-index: -1;
+}
+
+.right-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: #b7322a;
+    z-index: -1;
+}
+
+.header {
+    height: 10vh;
+    margin: 0vh 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5vw;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    height: auto;
+    width: 20vw;
+    border-radius: 5px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #d8d8d8;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+
+.classification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 50%;
+    position: relative;
+    background-color: rgb(16, 11, 58);
+    z-index: 10;
+}
+
+.classification h1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    font-size: 3.5rem;
+    font-family: merri;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    padding: 0;
+    margin: 0;   
+}
+
+.specs ul{
+    position: absolute;
+    left: 20vw;
+    top: 50%;
+    transform:translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: disc;
+
+    gap: 2vh;
+    width: 5vw;
+}
+
+.specs ul li {
+    border-bottom: 1px solid #929292;
+}
+
+.specs ul li::marker{
+    color: #b7322a;
+}
+
+.specs ul li:last-child {
+    border-bottom: none;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 10%;
+}
+
+.details h2 {
+    font-size: 4rem;
+    font-family: merri;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin-bottom: 5vh;
+    color: #fff;
+}
+
+.naming-specs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 5vh;
+}
+
+.micro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+.micro {
+    height: 15vh;
+    padding-right: 1vw;
+    border-right: 1px solid #fff;
+}
+
+.micro-container p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.det-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2vh;
+}
+
+
+.det {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.det img {
+    height: 3vh;
+}
+
+.det p {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 100;
+}
+
+.price {
+    position: relative;
+    left: -10%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2vh;
+    margin-top: 5vh;
+}
+
+.price h3 {
+    font-size: 2rem;
+    color: #de982e;
+    font-weight: 900;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.toggle p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.price button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #de982e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

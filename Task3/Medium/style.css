@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #141122;
+  font-family: "Outfit", sans-serif;
+}
+
+.hero-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 1.5rem 5vw 8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  border-bottom-left-radius: 50% 12%;
+  border-bottom-right-radius: 50% 12%;
+}
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.45)),
+    url("./images/BlossomVillage.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(3px);
+
+  transform: scale(1.08);
+
+  z-index: -1;
+}
+
+.navbar {
+  width: 100%;
+
+  min-height: 70px;
+
+  padding: 0.8rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  border-radius: 1rem;
+
+  backdrop-filter: blur(6px);
+
+  z-index: 10;
+}
+
+.logo h3 {
+  color: antiquewhite;
+
+  font-size: 1.2rem;
+
+  letter-spacing: 0.15rem;
+
+  font-family: "Orbitron", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: antiquewhite;
+
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.social-links img {
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+}
+
+.hero-text-wrapper {
+  flex: 1;
+
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.hero-subtitle,
+.hero-description {
+  color: antiquewhite;
+
+  font-size: clamp(1rem, 2vw, 1.4rem);
+
+  letter-spacing: 0.08rem;
+
+  text-shadow:
+    0 2px 15px rgba(0, 0, 0, 0.6);
+
+  opacity: 0.95;
+}
+
+.hero-subtitle {
+  align-self: flex-start;
+}
+
+.hero-description {
+  align-self: flex-end;
+}
+
+.hero-title {
+  font-family: "Orbitron", sans-serif;
+
+  font-size: clamp(3rem, 8vw, 6rem);
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: 0.35rem;
+  word-spacing: 0.4rem;
+
+  white-space: nowrap;
+
+  color: antiquewhite;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 220, 180, 0.15);
+
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-character-wrapper {
+  position: absolute;
+
+  left: 48%;
+  bottom: -1.5rem;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+}
+
+.hero-character {
+  height: min(65vh, 700px);
+  width: auto;
+
+  display: block;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 20px 30px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 40px rgba(255, 210, 140, 0.15));
+}
+
+.mint-button {
+  position: absolute;
+
+  left: 50%;
+  bottom: 8rem;
+
+  transform: translateX(-50%);
+
+  padding: 1rem 3rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+
+  background: #e6c27a;
+
+  color: #111;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15rem;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+.vision-section {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: -3rem;
+
+  padding: 10rem 8vw 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4rem;
+}
+
+.section-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-family: "Orbitron", sans-serif;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  letter-spacing: 0.3rem;
+
+  color: antiquewhite;
+}
+
+.section-divider {
+  position: relative;
+
+  width: min(80vw, 900px);
+  height: 2px;
+
+  margin-top: 1.5rem;
+
+  background: #c9b7a0;
+}
+
+.divider-diamond {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 14px;
+  height: 14px;
+
+  background: #e8c59c;
+
+  border: 2px solid #2b2433;
+
+  transform:
+    translate(-50%, -50%) rotate(45deg);
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  background: #e8c59c;
+
+  transform:
+    translateY(-50%) rotate(45deg);
+}
+
+.section-divider::before {
+  left: 0;
+}
+
+.section-divider::after {
+  right: 0;
+}
+
+.vision-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 4rem;
+}
+
+.vision-text {
+  max-width: 580px;
+
+  color: antiquewhite;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
