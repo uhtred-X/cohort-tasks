@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
+    padding: 21px;
+
+}
+
+.dashboard{
+    height: 94vh;
+    width: 94vw;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-rows:
+    1fr 1.3fr 1.4fr 1.7fr;
+
+    grid-template-areas:
+        "artist exhibition sidebar announcement"
+        "artist exhibition sidebar artist2"
+        "bitcoin qr sidebar artist2"
+        "bitcoin qr review review";
+
+    gap: 10px;
+    justify-content: center;   
+  
+}
+.dashboard > *{
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgba(75, 75, 75, 0.2);
+}
+.artist-card{
+    grid-area: artist;
+}
+.artist-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.exhibition-card{
+    grid-area: exhibition;
+}
+.exhibition-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.sidebar-menu{
+    grid-area: sidebar;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    background: #111;
+
+    border-radius: 25px;
+
+    text-transform: uppercase;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+
+    padding: 0.5rem;
+
+    border-radius: 18px;
+}
+.menu-left{
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.active{
+    background: rgba(255,255,255,0.08);
+}
+
+.status-dot{
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #b14cff;
+}
+
+.divider{
+    height: 1px;
+    width: 80%;
+
+    background: rgba(255,255,255,0.15);
+
+    margin: 1rem 0;
+
+    flex-shrink: 0;
+}
+
+.announcement-card{
+    grid-area: announcement;
+    background: #b14cff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.emoji{
+    filter: invert(100%);
+    font-size: 2.5rem;
+
+}
+
+.vertical-divider{
+    width: 1px;
+    height: 4.5vh;
+
+    background: rgba(255,255,255,0.2);
+}
+
+.cube{
+    filter: invert(100%);
+    font-size: 2.75rem;
+}
+.announcement-card span{
+    font-size: 70%;
+    color: whitesmoke;
+    white-space: nowrap;
+}
+.artist2-card   {
+    grid-area: artist2;
+}
+
+.artist2-card img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bitcoin-card{
+    grid-area: bitcoin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #76e218 solid 2px;
+
+}
+ .butusic{
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    }
+
+.butusic h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.horizontal-divider{
+    width: 80%;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 1rem 0;
+}
+.bitcoin-flex{
+    display: flex;
+
+    justify-content:center;
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.bitcoin-icon{
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #78d129;
+
+    border-radius: 20%;
+
+    font-size: 2rem;
+
+    color: whitesmoke;
+}
+
+.desc{
+    font-size: 0.8rem;
+    color: whitesmoke;
+}
+
+.barcode{
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    margin-top: 1rem;
+}
+
+.barcode span{
+    width: 4px;
+    height: 50px;
+
+    background: white;
+}
+
+.qr-card{
+    grid-area: qr;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    background: black;
+}
+
+.qr-card > div{
+    flex: 1;
+
+    border-radius: 25px;
+
+    padding: 1.2rem;
+}
+
+.exhibition-info{
+    background: #111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.location-icon{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #d7ff3f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+}
+
+.location p{
+    font-size: 0.7rem;
+
+    color: rgba(255,255,255,0.5);
+}
+
+.exhibition-info h2{
+    color: white;
+
+    font-size: 1.6rem;
+
+    line-height: 1.3;
+}
+
+.exhibition-info span{
+    color: rgba(255,255,255,0.4);
+
+    font-size: 0.8rem;
+}
+
+.awards-card{
+    background: #111;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.award{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+
+    font-size: 1.75rem;
+
+    position: relative;
+}
+
+.appstore-card{
+    background: #d7ff3f;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-left{
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+.app-left .fa-qrcode{
+    font-size: 3.5rem;
+    padding-bottom: 16px;
+}
+
+.app-text h3{
+    margin-bottom: 0.2rem;
+    margin-top: -1rem;
+
+    color: black;
+}
+
+.app-text p{
+    font-size: 0.8rem;
+
+    color: rgba(0,0,0,0.7);
+}
+
+.arrow-icon{
+    font-size: 1.3rem;
+
+    color: black;
+
+    align-self: flex-start;
+}
+
+
+.review-card{
+    grid-area: review;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+
+    gap: 2rem;
+
+    background: whitesmoke;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+}
+
+.review-left{
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.review-left h1{
+    text-transform: uppercase;
+
+    font-size: 2rem;
+
+    line-height: 1.1;
+}
+
+.review-left p{
+    font-size: 0.9rem;
+
+    color: rgba(0,0,0,0.6);
+}
+
+.review-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 0.7rem;
+
+    position: relative;
+}
+.review-right h1{
+    font-size: 5rem;
+
+    line-height: 0.9;
+
+    margin: 0;
+}
+
+.review-right img{
+    width: 120px;
+
+    display: block;
+
+    object-fit: contain;
+
+    transform: translate(-25px, -10px);
+}
+
+.review-btn{
+    background: #b14cff;
+
+    color: white;
+
+    border: none;
+
+    padding: 0.9rem 1.5rem;
+
+    border-radius: 18px;
+
+    font-size: 0.8rem;
+
+    align-self: flex-end;
+
+    cursor: pointer;
+}

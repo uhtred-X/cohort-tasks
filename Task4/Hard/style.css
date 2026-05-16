@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: calc(100vh - 6rem);
+
+    overflow: hidden;
+
+    background: #ececec;
+
+
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+
+.portfolio-layout {
+    padding: 2rem;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.5fr;
+    grid-template-rows: 90vh;
+
+    gap: 2.5rem;
+}
+
+.profile-card {
+    position: relative;
+
+    overflow: visible;
+
+    border-radius: 35px;
+
+    background: #8f8ce7;
+}
+
+.profile-card::before {
+    content: "✣ About Me";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 140px;
+    height: 25px;
+
+    background: #ececec;
+
+    clip-path: polygon(0 0,
+            100% 0,
+            80% 100%,
+            0 100%);
+
+    z-index: 5;
+}
+
+
+.purple-circle {
+    position: absolute;
+
+    top: 80px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: #d99df5;
+
+    z-index: 1;
+}
+
+.white-ring {
+    position: absolute;
+
+    top: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 310px;
+    height: 310px;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    z-index: 2;
+}
+
+.profile-image {
+    position: absolute;
+
+    top: 25px;
+    left: 48%;
+
+    transform: translateX(-50%);
+
+    width: 60%;
+    height: 55%;
+
+    z-index: 3;
+
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.profile-text {
+    position: absolute;
+
+    left: 35px;
+    bottom: 35px;
+
+    z-index: 5;
+
+    color: white;
+}
+
+.small-text {
+    font-size: 4rem;
+
+    font-weight: 200;
+}
+
+.profile-text h1 {
+    font-size: 5rem;
+
+    line-height: 0.9;
+
+    margin-bottom: 1rem;
+}
+
+.profile-text span {
+    font-size: 0.9rem;
+
+    opacity: 0.8;
+}
+
+.profile-text hr{
+    width: 80%;
+    margin-top: 2.5px;
+
+    border: none;
+
+    border-top: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+.profile-badge {
+    position: absolute;
+
+    right: 30px;
+    bottom: 40px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 0.8rem;
+
+    z-index: 5;
+}
+
+.side-menu {
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        rotate(-90deg) translateX(-50%) translateY(-120%);
+
+    transform-origin: left top;
+
+    display: flex;
+
+    gap: 3rem;
+
+    z-index: 5;
+}
+
+
+.content-area {
+    display: grid;
+    height: 90vh;
+    position: relative;
+    grid-template-columns:
+        1.5fr 0.5fr;
+
+    grid-template-rows:
+    50px 1fr 150px;
+
+    gap: 2.5rem;
+}
+
+.hero-title {
+    grid-column: 1 / 3;
+}
+
+.hero-title h1{
+    font-size: clamp(4rem, 6vw, 6rem);
+
+    line-height: 0.9;
+
+    margin: 0;
+    letter-spacing: 30px;
+}
+.flamingo-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+}
+
+.flamingo-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+.stats-stack {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.stat-card {
+    flex: 1;
+
+
+    padding: 2rem;
+}
+
+.stat-card h2 {
+    font-size: 4rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+}
+
+.mint {
+    background: #bff0ea;
+    border-radius:
+        30px 30px 0 0;
+}
+
+.purple {
+    background: #9d7ae5;
+
+    color: white;
+    border-radius:
+         0 0 30px 30px;
+}
+
+.bottom-row {
+    grid-column: 1 / 3;
+
+    display: flex;
+
+    gap: 2.5rem;
+}
+
+.clients-card {
+    flex: 2;
+
+    border-radius: 30px;
+
+    background: #666;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 150px;
+}
+
+.apple-logo {
+    font-size: 5rem;
+}
+
+.orb-wrapper {
+    flex: 3;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.orb-card {
+    height: 100%;
+
+    border-radius: 30px;
+
+    background: black;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.orb-card img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    transform: translateX(75%);
+}
+
+.award-card {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 45%;
+    height: 100%;
+
+    border-radius: 30px;
+
+    background: #ffc96b;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.award-card h2 {
+    font-size: 4rem;
+}
