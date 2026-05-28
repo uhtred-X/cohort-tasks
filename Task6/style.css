@@ -1,0 +1,1682 @@
+:root {
+  --color-bg: #fbf9eb;
+  --color-surface: #fffefb;
+  --color-text: #201c1a;
+  --color-primary: #2a2857;
+  --color-accent: #ffb500;
+  --color-border: #000000;
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --transition-fast: 0.2s ease;
+}
+
+@font-face {
+  font-family: reckless;
+  src: url(./fonts/RecklessCondensedS-TRIAL-Book.woff);
+}
+@font-face {
+  font-family: roboto;
+  src: url(./fonts/RobotoMono-Regular.ttf);
+}
+@font-face {
+  font-family: figtree;
+  src: url(./fonts/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
+}
+@font-face {
+  font-family: midnight;
+  src: url(./fonts/midnight-sans-rd-12-semibold-trial.otf);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  margin: 0;
+  z-index: 1000;
+  background-color: var(--color-surface);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: top var(--transition-fast), width var(--transition-fast), border-radius var(--transition-fast);
+}
+
+body.nav-stuck nav {
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+nav i {
+  width: 40%;
+  font-size: 2rem;
+}
+.down-svg i {
+  border: 1px solid black;
+  padding: 0.05rem 0.05rem;
+  border-radius: 50%;
+  background-color: #c1e4f8;
+  font-size: 0.9rem;
+}
+.nav-part-1 {
+  font-family: reckless;
+  display: none;
+  gap: 2rem;
+  align-items: center;
+  width: 40%;
+}
+.nav-part-1 h3 {
+  font-weight: 300;
+  font-size: 1.7vw;
+}
+.nav-part-2 img {
+  width: 100%;
+}
+.nav-part-3 {
+  font-family: roboto;
+  display: flex;
+  gap: 1.8rem;
+  align-items: end;
+  width: 40%;
+  justify-content: end;
+}
+.nav-part-3 h5 {
+  font-weight: 500;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  display: none;
+}
+.bag-svg {
+  position: relative;
+}
+.bag-svg svg {
+  width: clamp (1.7vw 5vw 5vw);
+}
+.item-count {
+  display: flex;
+  padding: 0.01rem 0.23rem;
+  background-color: #ffb500;
+  border-radius: 50%;
+  border: 0.1vw solid black;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  font-size: 0.7rem;
+  transform: translate(-50%, -50%);
+}
+
+#section-1 {
+  width: 100%;
+  height: 95vh;
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=511");
+  background-size: cover;
+  background-position: 60% 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 2rem;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+#section-1 h1 {
+  font-size: clamp(3.6rem, 3vw, 3rem);
+  font-family: reckless;
+  color: #fbf9eb;
+  font-weight: 500;
+}
+#section-1 p {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  font-family: figtree;
+  color: #fbf9eb;
+  font-weight: 300;
+}
+#section-1 button {
+  background-color: #2a2857;
+  padding: 0.9rem 8rem;
+  color: #fbf9eb;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+#section-1 .btn-link {
+  padding: 0.9rem 8rem;
+}
+
+#section-1 .btn-link:hover {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+#section-1 button:hover{
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+#section-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 4rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+.section-2-heading {
+  font-size: 2rem;
+  font-family: reckless;
+  font-weight: 500;
+  text-align: center;
+}
+
+#section-3 {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 2rem;
+  border-bottom: 1px solid black;
+}
+
+.best-sellers h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #daaeea;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  rotate: -2deg;
+}
+
+.best-sellers {
+  margin-bottom: 2rem;
+}
+.cards-container {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.card-container {
+  width: 100%;
+}
+.product-card {
+  height: 370px;
+  width: 300px;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card img {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.green {
+  background-color: #bde58e;
+}
+.green-2 {
+  background-color: #c0e571;
+}
+.green-3 {
+  background-color: #b0e8c1;
+}
+.yellow {
+  background-color: #ffd884;
+}
+
+.mint {
+  background-color: #bfe6c8;
+}
+.orange {
+  background-color: #ffcb96;
+}
+.pink {
+  background-color: #ffd1b8;
+}
+.blue-2 {
+  background-color: #8fbce8;
+}
+.blue {
+  background-color: #aee0f9;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top span {
+  font-family: midnight;
+  font-size: 0.9rem;
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.top p {
+  font-family: figtree;
+  font-size: 0.8rem;
+}
+
+.product-card img {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.add-btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.7rem;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.product-info {
+  padding-top: 1rem;
+}
+
+.product-info h2 {
+  font-family: reckless;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.product-info h4 {
+  margin: 0.7rem 0;
+  font-family: figtree;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.product-info p {
+  font-family: figtree;
+  color: #555;
+  line-height: 1.4;
+}
+
+.all-teas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0rem;
+}
+.all-teas button {
+  background-color: #2a2857;
+  padding: 0.9rem 3rem;
+  color: #fbf9eb;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.all-teas .btn-link {
+  padding: 0.9rem 3rem;
+}
+.all-teas button:hover{
+  background-color: #f5f5f5;
+  color: #000000;
+  border: 1px solid black;
+}
+
+#section-4 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1.5rem;
+  border-bottom: 1px solid black;
+  margin-top: 4rem;
+}
+
+.discover h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #ff7f31;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  rotate: -2deg;
+}
+.discover {
+  margin-bottom: 2rem;
+}
+.discover-info {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.discover-info h1 {
+  font-size: 2.2rem;
+  font-family: reckless;
+  font-weight: 500;
+  text-align: start;
+}
+.discover-info p {
+  font-size: 0.9rem;
+  font-family: figtree;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.discover-info input {
+  width: 100%;
+  font-size: 2rem;
+  font-family: reckless;
+  font-weight: 300;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  background-color: #fbf9eb;
+  color: #aeada9cb;
+}
+.vibe-btns button {
+  font-size: 2rem;
+  font-family: reckless;
+  font-weight: 100;
+  padding: 0.5rem 0.9rem;
+  border-radius: 1rem;
+  margin: 0.2rem;
+  background-color: #daeaff;
+  text-transform: capitalize;
+  border: 1px solid #78797a;
+}
+
+.vibe-btns button:hover {
+    background-color: #9ed7ff;
+}
+
+#section-5 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=1600");
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 2rem;
+  gap: 6rem;
+  align-items: center;
+}
+.our-origins {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.origin-info h4 {
+  font-size: 2rem;
+  font-family: reckless;
+  font-weight: 300;
+  color: #fbf9eb;
+  text-align: center;
+  letter-spacing: 0.06rem;
+}
+.our-origins h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #a2c9fc;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  rotate: -2deg;
+}
+.origin-heading {
+  font-size: 3rem;
+  font-family: midnight;
+  font-weight: 500;
+  text-align: center;
+  color: #fcfbf8;
+  line-height: 0.9;
+}
+.catle {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+}
+.catle img {
+  width: 30vw;
+}
+.aims {
+  display: flex;
+  gap: 2rem;
+}
+
+.aims p {
+  font-size: 0.9rem;
+  font-family: roboto;
+  font-weight: 500;
+  color: #fbf9eb;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+}
+.quality,
+.care,
+.transparent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aims img {
+  width: 20vw;
+}
+
+.story-btn button {
+  background-color: #fafafa;
+  padding: 0.9rem 8rem;
+  color: #000000;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.story-btn .btn-link {
+  background-color: #fafafa;
+  padding: 0.9rem 8rem;
+  color: #000000;
+}
+
+.story-btn .btn-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+.story-btn button:hover {
+    background-color: #2a2857;
+  color: #fbf9eb;
+
+}
+
+#section-6 {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 2rem;
+  margin: 4rem 0rem;
+  border-bottom: 1px solid black;
+}
+
+.green-1-l {
+  background-color: #abdf74;
+}
+.green-2-l {
+  background-color: #ade674;
+}
+.yellow-l {
+  background-color: #ffd265;
+}
+.orange-l {
+  background-color: #f5af8a;
+}
+.purple-l {
+  background-color: #d9c2e1;
+}
+.green-1-d {
+  background-color: #73bc25;
+}
+.green-2-d {
+  background-color: #8bc045;
+}
+.yellow-d {
+  background-color: #ffb500;
+}
+.orange-d {
+  background-color: #ea6d44;
+}
+.purple-d {
+  background-color: #c790db;
+}
+.reviews h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #73bc25;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  rotate: -2deg;
+}
+.reviews-info {
+  display: none;
+}
+.product-card-2 {
+  height: 500px;
+  width: 310px;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.top-div {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-div h3 {
+  font-size: 2rem;
+  font-family: reckless;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.06rem;
+}
+.top-div p {
+  font-size: 0.9rem;
+  font-family: roboto;
+  font-weight: 500;
+  color: #fbf9eb;
+  text-transform: uppercase;
+  align-items: center;
+}
+.bottom-div p {
+  font-family: roboto;
+  text-transform: uppercase;
+}
+.bottom-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.bottom-img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bottom-div button {
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: 0.1px solid black;
+}
+
+
+#section-7 {
+  width: 100%;
+  height: 100vh;
+  background-color: #2a2857;
+  display: flex;
+  flex-direction: column;
+}
+.sec-7-top {
+  height: 50%;
+  width: 100%;
+}
+.sec-7-top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.sec-7-bottom {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 2.3rem;
+}
+.sec-7-bottom h1 {
+  font-size: 3rem;
+  font-family: reckless;
+  color: #fbf9eb;
+  font-weight: 500;
+}
+.sec-7-bottom p {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  font-family: figtree;
+  color: #fbf9eb;
+  font-weight: 300;
+}
+.sec-7-bottom button {
+  background-color: #fdfdfc;
+  padding: 0.9rem 8rem;
+  color: #000000;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: 1px solid black;
+}
+
+.sec-7-bottom .btn-link {
+  background-color: #fdfdfc;
+  padding: 0.9rem 8rem;
+  color: #000000;
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  border: 1px solid black;
+}
+
+.sec-7-bottom button:hover {
+    color:#ffff;
+  background-color: #2a2857;
+
+}
+
+#section-8 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #9f6429;
+  position: relative;
+}
+.our-latte {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.our-latte h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #ffcb96;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  rotate: -2deg;
+}
+.our-latte-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.our-latte-info h2 {
+  font-family: midnight;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+  color: #fbf9eb;
+}
+.our-latte-info p {
+  font-family: roboto;
+  color: #fbf9eb;
+  margin: 1.5rem 0rem;
+}
+.latte-bottom {
+  background-color: #ffcb96;
+  width: 100%;
+  height: 80vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+
+.latte-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.latte-container h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #f5af8a;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  margin-bottom: 2rem;
+  rotate: -2deg;
+}
+.latte-container h2 {
+  font-size: 3rem;
+  font-family: reckless;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  width: 55%;
+  text-align: center;
+}
+.latte-container p {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  font-family: figtree;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.latte-container button {
+  background-color: #fdfdfc;
+  padding: 0.9rem 4rem;
+  color: #000000;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.latte-container .btn-link {
+  background-color: #fdfdfc;
+  padding: 0.9rem 4rem;
+  color: #000000;
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  border: none;
+}
+.latte-container button:hover {
+   color:#ffff;
+  background-color: #2a2857;
+}
+
+.latte-img {
+  position: absolute;
+  right: 7%;
+  top: -5%;
+}
+.latte-img img {
+  height: 80vw;
+}
+
+#section-9 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1.5rem;
+  border-bottom: 1px solid black;
+  margin-top: 4rem;
+}
+
+.journal h1 {
+  font-size: 2.3rem;
+  font-family: midnight;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #ffb500;
+  padding: 0rem 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  rotate: -2deg;
+}
+.journal {
+  margin-bottom: 2rem;
+}
+.journal-info {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.journal-info h1 {
+  font-size: 2.2rem;
+  font-family: reckless;
+  font-weight: 500;
+  text-align: start;
+}
+
+.product-card-4 {
+  height: 370px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  background-color: #2a2857;
+}
+
+.product-card-4 .top {
+  height: 80%;
+  padding: 1rem;
+  align-items: start;
+}
+
+.img-1 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/enjoy_9b280eb3-acdd-47d2-ba91-0d2f259d3d66.svg?v=1774545568&width=750.0");
+  background-size: cover;
+}
+.img-2 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-36_16x9_6008ffcb-7380-43d9-b1f6-b1f542f934b0.jpg?v=1773683613&width=240");
+  background-size: cover;
+  background-position: center;
+}
+.img-3 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/Two_Leaves_May_25_Shoot-24_SQ.jpg?v=1775656199&width=750.0");
+  background-size: cover;
+}
+.img-4 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/chef_s_matcha_mix_9ae88222-5d88-415f-a90d-4cd0e47af7d8.svg?v=1775654273&width=750.0");
+  background-size: cover;
+}
+.img-5 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/ceremonial-matcha-tea-organic_1cf6ef8d-b56a-483f-8d58-29f7667bd97a.svg?v=1773688403&width=240");
+  background-size: cover;
+}
+.img-6 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/easy_to_prepare_cold_d444ce3d-bb29-4de5-83ae-4aef3582392b.svg?v=1775655934&width=750.0");
+  background-size: cover;
+}
+.img-7 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/easy_to_prepare_cold_d2bb63c1-ef3c-4bd5-ac42-ecce65535274.svg?v=1775654474&width=750.0");
+  background-size: cover;
+}
+.img-8 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/easy_to_prepare_cold_d2bb63c1-ef3c-4bd5-ac42-ecce65535274.svg?v=1775654474&width=750.0");
+  background-size: cover;
+}
+.img-9 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/mountain-high-chai-naked-tea-pour_bc4facfe-d769-467b-9d98-1ca8bc3c10a5.svg?v=1775656147&width=240");
+  background-size: cover;
+}
+.img-10 {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/serving_powder_898afede-05d0-4bcf-bfa7-bfdb89c4c08d.svg?v=1773688431&width=750.0");
+  background-size: cover;
+}
+
+.product-card-4 .top span {
+  font-family: midnight;
+  font-size: 0.9rem;
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.product-card-4 .product-info {
+  background-color: #c0dbff;
+  height: 20%;
+  padding: 1rem;
+}
+.product-card-4 .product-info h2 {
+  font-family: roboto;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#section-10 {
+  width: 100%;
+  height: 100vh;
+  background-color: #f26412;
+  display: flex;
+  flex-direction: column;
+}
+.sec-10-top {
+  height: 50%;
+  width: 100%;
+}
+.sec-10-top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.sec-10-bottom {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 0rem 2.3rem;
+}
+.sec-10-bottom h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-family: reckless;
+  color: #fbf9eb;
+  font-weight: 500;
+}
+.sec-10-bottom p {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  font-family: figtree;
+  color: #fbf9eb;
+  font-weight: 300;
+}
+.sec-10-bottom button {
+  background-color: #fbf9eb;
+  padding: 0.9rem 8rem;
+  color: #000000;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.sec-10-bottom .btn-link {
+  background-color: #fbf9eb;
+  padding: 0.9rem 8rem;
+  color: #000000;
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  border: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sec-10-bottom button:hover {
+  background-color: #2a2857;
+  color: #ffffff;
+}
+
+#section-11 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #c0dbff;
+  padding: 2.5rem 1rem;
+}
+.sec-11-con {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.sec-11-top-con {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.sec-11-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sec-11-top h1 {
+  font-family: midnight;
+  font-weight: 100;
+}
+.sec-11-top h2 {
+  font-family: reckless;
+  font-weight: 300;
+  color: #45484f;
+  font-size: 1.7rem;
+}
+.sec-11-top input {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid black;
+}
+.sec-11-top button {
+  background-color: #2a2857;
+  padding: 0.9rem 10.5rem;
+  color: #fbf9eb;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+  width: fit-content;
+  border: 1px solid black;
+}
+
+.sec-11-top button:hover {
+  background-color:#ffb500;
+  color: #000000;
+}
+
+.media-icon {
+  display: flex;
+  gap: 1rem;
+}
+.media-icon i {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+.media-icon i:hover {
+    background-color: #ffff;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2857;
+  color: #fff;
+  border-radius: 1rem;
+}
+.overview-desk {
+  display: none;
+  flex-direction: column;
+  background-color: #2a2857;
+  color: #fff;
+  border-radius: 1rem;
+}
+.over-1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 0.1px solid snow;
+}
+.over-1 h3 {
+  font-size: 2rem;
+  font-family: reckless;
+  font-weight: 300;
+}
+.over-1 i {
+  background-color: #c0dbff;
+  color: #000000;
+  padding: 0.01rem;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.sec-11-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2rem 0 1.2rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 42rem;
+  justify-content: flex-start;
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/footer-extended_1.png?v=1771834074");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+.tree-img {
+  display: none;
+}
+.sec-11-bottom img {
+  width: clamp(16rem, 32vw, 24rem);
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5rem;
+}
+.footer-legal {
+  font-family: roboto;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #3f4858;
+  position: absolute;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  white-space: nowrap;
+}
+
+@media (min-width:768px)  {
+
+  nav{
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-part-2 img{
+    width: 180px;
+  }
+
+  .nav-part-3{
+    gap: 1rem;
+  }
+
+  #section-1{
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+    background-position: center;
+  }
+
+  #section-1 h1{
+    font-size: 4.5rem;
+    max-width: 80%;
+  }
+
+  #section-1 p{
+    font-size: 1.2rem;
+    max-width: 70%;
+  }
+
+  #section-2{
+    padding: 5rem 3rem;
+  }
+
+  .section-2-heading{
+    width: 90%;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  #section-4{
+    min-height: 60vh;
+  }
+  #section-6,
+  #section-9{
+    min-height: 0;
+  }
+  #section-3,
+  #section-6,
+  #section-9{
+    padding-left: 3rem;
+  }
+
+  .cards-container{
+    gap: 1.5rem;
+  }
+
+  .product-card{
+    width: 340px;
+    height: 480px;
+  }
+
+  .product-info h2{
+    font-size: 2rem;
+  }
+
+  .discover-info h1{
+    font-size: 3rem;
+  }
+
+  .discover-info input{
+    width: 70%;
+  }
+
+  .vibe-btns button{
+    font-size: 1.3rem;
+  }
+
+  #section-5{
+    gap: 4rem;
+    padding: 4rem 3rem;
+  }
+
+  .origin-heading{
+    font-size: 4rem;
+  }
+
+  .origin-info h4{
+    font-size: 2.2rem;
+    width: 90%;
+  }
+
+  .aims{
+    justify-content: center;
+  }
+
+  .aims img{
+    width: 80px;
+  }
+
+  .product-card-2{
+    width: 350px;
+    height: 520px;
+  }
+
+  #section-7{
+    height: 100vh;
+  }
+
+  .sec-7-bottom{
+    padding: 4rem;
+    gap: 4rem;
+  }
+
+  .sec-7-bottom h1{
+    font-size: 4rem;
+  }
+
+  .latte-bottom{
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 3rem;
+  }
+
+  .latte-img{
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .latte-img img{
+    height: 400px;
+  }
+
+  .latte-container{
+    align-items: start;
+    text-align: left;
+  }
+
+  .latte-container h2{
+    width: 100%;
+    text-align: left;
+  }
+
+  .latte-container p{
+    text-align: left;
+  }
+
+  .product-card-4{
+    width: 340px;
+  }
+
+  #section-10{
+    height: auto;
+  }
+
+  .sec-10-bottom{
+    padding: 2rem;
+  }
+
+  .sec-10-bottom h1{
+    font-size: 4rem;
+  }
+
+  .sec-11-top button{
+    padding: 1rem 5rem;
+  }
+
+  .tree-img{
+    display: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  nav {
+    padding: 0.2rem 2rem;
+  }
+  .ri-menu-line {
+    display: none;
+  }
+  .nav-part-1 {
+    display: flex;
+  }
+  .nav-part-2 img {
+    width: 10vw;
+  }
+  .nav-part-3 {
+    align-items: center;
+  }
+  .nav-part-3 h5 {
+    display: block;
+  }
+  .bag-svg svg {
+    width: 1.7vw;
+  }
+
+  #section-1 {
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+  }
+  #section-1 h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    max-width: 25vw;
+  }
+  #section-1 p {
+    font-size: 1rem;
+    max-width: 40vw;
+  }
+
+  #section-2 {
+    padding: 6rem;
+  }
+
+  .section-2-heading {
+    font-size: 3.5rem;
+    font-weight: 200;
+    width: 70%;
+  }
+
+  #section-3 {
+    align-items: center;
+  }
+
+  .best-sellers h1 {
+    font-size: 3.5rem;
+    border-bottom: 2px solid black;
+  }
+
+  .best-sellers {
+    margin-bottom: 4rem;
+  }
+
+  .top span {
+    font-size: 1.5rem;
+  }
+
+  .top p {
+    font-size: 1rem;
+  }
+
+  .all-teas button {
+    padding: 1rem 3.5rem;
+  }
+
+  #section-4 {
+    padding: 0rem 8.5rem;
+    margin: 6rem 0rem;
+    border-bottom: 0px solid black;
+  }
+  .discover h1 {
+    font-size: 3.5rem;
+  }
+  .discover-info h1 {
+    font-size: 3.5rem;
+  }
+  .discover-info p {
+    margin-top: 5rem;
+  }
+
+  .discover-info input {
+    width: 38%;
+    padding: 1.5rem;
+  }
+  .vibe-btns button {
+    font-size: 2.2rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  #section-5 {
+    gap: 8rem;
+  }
+
+  .our-origins h1 {
+    font-size: 4rem;
+  }
+  .origin-heading {
+    font-size: 6rem;
+    width: 60%;
+  }
+
+  .origin-info h4 {
+    font-size: 4rem;
+  }
+
+  .catle {
+    position: absolute;
+    right: 10%;
+    top: -1%;
+  }
+  .catle img {
+    max-width: 12vw;
+  }
+
+  .aims p {
+    width: 70%;
+    font-weight: 900;
+  }
+
+  .aims img {
+    max-width: 8vw;
+  }
+
+  .story-btn button {
+    padding: 1rem 4rem;
+  }
+
+  #section-6 {
+    margin: 6rem 0rem;
+    border-bottom: 0px solid black;
+  }
+  .reviews {
+    padding: 0rem 6rem;
+  }
+
+  .reviews h1 {
+    font-size: 3.5rem;
+  }
+
+  .reviews-info {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    margin: 2rem 0rem;
+  }
+  .reviews-info h1 {
+    font-size: 3.5rem;
+    width: 80%;
+    font-family: reckless;
+    padding: 0rem 6rem;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  #section-7 {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  .sec-7-top {
+    height: 100%;
+    width: 50%;
+  }
+  .sec-7-bottom {
+    width: 50%;
+    gap: 2rem;
+    align-items: start;
+    padding: 1rem 3.5rem;
+    text-align: start;
+  }
+  .sec-7-bottom h1 {
+    width: 85%;
+    font-size: 5rem;
+  }
+  .sec-7-bottom button {
+    padding: 1rem 4rem;
+  }
+
+  .our-latte h1 {
+    font-size: 3.5rem;
+  }
+  .our-latte-info h2 {
+    font-size: 5rem;
+  }
+
+  .latte-img {
+    position: relative;
+    left: 0%;
+    top: -10%;
+  }
+  .latte-img img {
+    height: 35vw;
+  }
+
+  .journal h1 {
+    font-size: 3.5rem;
+  }
+  .journal {
+    padding: 0rem 6rem;
+  }
+  .journal-info {
+    padding: 0rem 6rem;
+    margin-bottom: 5rem;
+  }
+  .journal-info h1 {
+    width: 90%;
+    font-size: 3.5rem;
+  }
+  .product-card-4 .top {
+    height: 80%;
+    padding: 1rem;
+    align-items: start;
+  }
+
+  #section-10 {
+    flex-direction: row;
+    position: relative;
+  }
+  .sec-10-top {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .sec-10-bottom {
+    position: absolute;
+    background-color: #f26412;
+    width: 38%;
+    top: 0%;
+    left: 3%;
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-align: start;
+  }
+  .sec-10-bottom h1 {
+    width: 60%;
+  }
+  .sec-10-bottom button {
+    padding: 0.9rem 3rem;
+  }
+
+  #section-11 {
+    padding: 0rem;
+  }
+  .sec-11-con {
+    padding: 2.5rem;
+  }
+  .sec-11-top-con {
+    padding: 2.5rem 6rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sec-11-top {
+    align-items: start;
+    width: 70%;
+  }
+  .sec-11-top h1 {
+    font-size: 3rem;
+  }
+  .sec-11-top h2 {
+    font-size: 2.5rem;
+  }
+  .sec-11-top input {
+    padding: 1.2rem 2rem;
+  }
+  .sec-11-top button {
+    padding: 1rem 7.5rem;
+  }
+  .media-icon {
+    align-items: end;
+  }
+  .overview {
+    display: none;
+  }
+  .overview-desk {
+    display: flex;
+    padding: 1rem 2rem;
+  }
+  .overview-part-1 {
+    display: flex;
+  }
+  .overview-part-2 {
+    display: flex;
+  }
+  .over-1 {
+    width: 22%;
+    height: 100%;
+    border: none;
+    flex-direction: column;
+  }
+  .over-1 h3 {
+    margin-bottom: 1rem;
+  }
+  .over-1 ul {
+    font-family: figtree;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #9e9f9f;
+    margin-top: 0.2rem;
+  }
+  .over-1 i {
+    display: none;
+  }
+
+  .sec-11-bottom img { width: clamp(20rem, 22vw, 28rem); }
+}
