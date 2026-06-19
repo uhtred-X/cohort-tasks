@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body data-theme="light">
+    <!-- ===================== HEADER ===================== -->
+    <header class="topbar">
+      <div class="brand">
+        <h1>Task Manager</h1>
+        <p>Organize your tasks efficiently</p>
+      </div>
+
+      <!-- Theme Toggle Switch -->
+      <button id="themeToggle" class="theme-btn" type="button">
+        🌙 Dark Mode
+      </button>
+    </header>
+
+    <main>
+      <!-- ===================== TASK FORM ===================== -->
+      <section class="card form-card">
+        <h2>Create New Task</h2>
+
+        <form id="taskForm" class="form-grid">
+          <!-- Title -->
+          <div class="field">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" placeholder="Enter task title" required />
+          </div>
+
+          <!-- Category -->
+          <div class="field">
+            <label for="task-category">Category</label>
+            <select id="task-category" required>
+              <option value="" selected disabled hidden>Select Category</option>
+              <option>Work</option>
+              <option>Personal</option>
+              <option>Study</option>
+              <option>Shopping</option>
+              <option>Finance</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Description -->
+          <div class="field field-full">
+            <label for="task-desc">Task Description</label>
+            <textarea id="task-desc" rows="3" placeholder="Describe your task..." required></textarea>
+          </div>
+
+          <!-- Priority -->
+          <div class="field field-full">
+            <label>Priority</label>
+            <div class="priority-group" id="priorityDiv">
+              <label class="priority-option priority-low">
+                <input type="radio" name="priority" value="Low" />
+                <span>Low</span>
+              </label>
+              <label class="priority-option priority-medium">
+                <input type="radio" name="priority" value="Medium" />
+                <span>Medium</span>
+              </label>
+              <label class="priority-option priority-high">
+                <input type="radio" name="priority" value="High" />
+                <span>High</span>
+              </label>
+              <label class="priority-option priority-urgent">
+                <input type="radio" name="priority" value="Urgent" />
+                <span>Urgent</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field field-full">
+            <button type="submit" class="btn-primary">Add Task</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===================== TASK STATS + CONTROLS ===================== -->
+      <section class="card controls-card">
+        <div class="stats">
+          <span>Total: <strong id="totalCount">0</strong></span>
+          <span>Pending: <strong id="pendingCount">0</strong></span>
+          <span>Completed: <strong id="completedCount">0</strong></span>
+        </div>
+
+        <div class="controls">
+          <input type="text" id="searchInput" placeholder="🔍 Search tasks..." />
+
+          <select id="filterCategory">
+            <option value="All">All Categories</option>
+            <option>Work</option>
+            <option>Personal</option>
+            <option>Study</option>
+            <option>Shopping</option>
+            <option>Finance</option>
+            <option>Other</option>
+          </select>
+
+          <button id="clearAllBtn" class="btn-danger" type="button">Clear All</button>
+        </div>
+      </section>
+
+      </section>
+
+      <!-- ===================== TASK LIST ===================== -->
+      <section id="task-container" class="task-grid"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
